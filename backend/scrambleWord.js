@@ -1,57 +1,7 @@
-var words = ["python", "plate", "bowl", "fork", "spoon", "knife"];
-// var ScrambleGame = {};
-// ScrambleGame.getrandomWords = () => {
-//     // chose a random word from the original array
-//     var randomWords = Math.floor(Math.random() * words.length);
-//     // store the word into a variable
-//     var chosenWord = words[randomWords];
-//     // remove the word from the original array to prevent repetition
-//     words.splice(randomWords, 1);
-//     return chosenWord;
-// };
-// ScrambleGame.shuffle = (chosenWord) => {
-//     // split the chosen word into letters and store them in a variable
-//     const letters = chosenWord.split("");
-//     // store the chosen words' length
-//     let wordLen = letters.length;
-//     let tmp;
-//     // loop to shuffle the letters
-//     for(var i = wordLen; i > 0; i--) {
-//         var scrambled = Math.floor(Math.random() * wordLen); 
-//         // And swap it with the current element.
-//         tmp = letters[wordLen]; 
-//         letters[wordLen] = letters[scrambled]; 
-//         letters[scrambled] = tmp;
-//     }
-//     console.log(letters.join(""));
-//     return letters.join("");
-// };
-
-// ScrambleGame.checkAnswer = (answer) => {
-//     if(answer === ScrambleGame.getrandomWords()){
-//         score += 1;
-//         return ScrambleGame.shuffle(ScrambleGame.getrandomWords())
-//     }
-//     else {
-//         lives -= 1;
-//         if(score > 0){
-//             score -= 1;
-//         }
-//     }
-//     if(score == 5){
-//         console.log("You win!");
-//         return "You win!";
-//     }
-//     if(lives == 0){
-//         console.log("You Lose!");
-//         return "You Lose!";
-//     }
-// }
-
-// module.exports = ScrambleGame;
+var words = ["python", "plate", "bowl", "fork", "spoon", "knife", "cupboard",
+"mouse", "headphones", ""];
 
 function getrandomWords() {
-    
         // chose a random word from the original array
         var randomWordsIndex = Math.floor(Math.random() * words.length);
         // word.push(words[randomWordsIndex]);
@@ -64,6 +14,7 @@ function getrandomWords() {
         return chosenWord;
 
 };
+
 module.exports = class ScrambleGame {
     constructor() {
         this.rndWord = getrandomWords();
