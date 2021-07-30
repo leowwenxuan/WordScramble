@@ -1,0 +1,85 @@
+/* header styling */
+
+header {
+    /* box-sizing: border-box; */
+    text-align: center;
+    font-size: 20pt;
+    line-height: 10vh;
+    text-transform: uppercase;
+    color: rgb(239, 242, 192);
+    background-color: rgb(25, 41, 124);
+}
+
+html, body {
+    margin: 0px;
+    background-color: rgb(180, 225, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#gameArea {
+    width: 40%;
+    margin: auto;
+    /* margin-top: 50px; */
+    text-align: center;
+}
+
+#startArea {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+#btn {
+    margin: auto;
+    text-align: center;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* #startBtn Styling */
+
+#startBtn {
+    display: inline-block;
+    background-color: #7b38d8;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 20px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#startBtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+#startBtn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#startBtn:hover {
+    background-color: #e8a8eb;
+}
+
+#startBtn:hover span {
+    padding-right: 25px;
+}
+
+#startBtn:hover span:after {
+    opacity: 1;
+    right: 0;
+}

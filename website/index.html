@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Unscramble!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <header id="header" class="hidden">Unscramble the word</header>
+    <div id="startArea">
+        <h3 class="animate__animated animate__bounce">Unscramble Word!</h3>
+        <h3>How to play</h3>
+        <p>Type in your guess and submit your answer</p>
+        <p>Score a total of 5 points to win</p>
+        <p>Good luck!</p>
+        <button id="startBtn">
+            <span>Let"s Play</span>
+        </button>
+    </div>
+    <div id="gameArea" class="hidden">
+        <div>
+            <p>Score: <span id="score">0</span></p>
+            <p>Lives: <span id="lives">5</span></p>
+            <h3 id="words">word</h3>
+            <input type="text" id="guess-input">
+        </div>
+        <div id="btn">
+            <button id="guess-button" type="submit">I'm Right!</button>
+        </div>
+    </div>
+    <!-- <div id="btn" class="hidden">
+        <button id="guess-button">I'm Right!</button>
+    </div> -->
+</body>
+
+</html>
