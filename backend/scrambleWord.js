@@ -57,4 +57,10 @@ module.exports = class ScrambleGame {
             }
         }
     }
+    reset(){
+        this.rndWord = getrandomWords();
+        this.score = 0;
+        this.lives = 5;
+        return this.rndWord;
+    }
 };
