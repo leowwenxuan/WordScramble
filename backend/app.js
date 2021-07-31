@@ -17,7 +17,7 @@ app.put("/", (req, res, next) => {
     const guess = req.query.guess;
     if (!isNaN(guess)) {
         res.send({
-            error: "It's alphabets. How did you get number?. Are your eyes okay?"
+            error: "ERROR ERROR ERROR"
         })
     }
 
