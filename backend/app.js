@@ -12,6 +12,15 @@ app.post("/", (req, res, next) => {
         word: rndword,
     })
 })
+app.post("/reset", (req, res, next) => {
+    const reset = start.reset();
+    const rndword = start.shuffle()
+    return res.send({
+        word: rndword,
+        score: 0,
+        lives: 5
+    })
+})
 
 app.put("/", (req, res, next) => {
     const guess = req.query.guess;
