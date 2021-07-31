@@ -17,13 +17,17 @@ html, body {
 }
 
 #gameArea {
-    width: 40%;
+    width: 70%;
     margin: auto;
-    /* margin-top: 50px; */
-    text-align: center;
+    padding-top: 20px;
 }
 
 #startArea {
+    text-align: center;
+}
+
+#guessArea {
+    padding-top: 100px;
     text-align: center;
 }
 
@@ -32,12 +36,22 @@ h3 {
 }
 
 #btn {
-    margin: auto;
+    margin-top: 10px;
     text-align: center;
 }
 
 .hidden {
     visibility: hidden;
+}
+
+#scoreboard {
+    float: left;
+    margin: 10px;
+}
+
+#livesboard {
+    float: right;
+    margin: 10px;
 }
 
 /* #startBtn Styling */
@@ -68,7 +82,7 @@ h3 {
     opacity: 0;
     top: 0;
     right: -20px;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 #startBtn:hover {
@@ -82,4 +96,87 @@ h3 {
 #startBtn:hover span:after {
     opacity: 1;
     right: 0;
+}
+
+/* Reset button styling*/
+
+#reset-button {
+    position: relative;
+    background-color: #f79526;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #FFFFFF;
+    padding: 7px;
+    width: 100px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#reset-button:hover {
+    background-color: #ca701d;
+}
+
+#reset-button:after {
+    content: "";
+    background: #dbdbdb;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+#reset-button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+/* guess button styling */
+#guess-button {
+    position: relative;
+    background-color: #3e97ca;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #FFFFFF;
+    padding: 7px;
+    width: 100px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#guess-button:hover {
+    background-color: #224c8a;
+}
+
+#guess-button:after {
+    content: "";
+    background: #66c0fc;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+#guess-button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
 }
