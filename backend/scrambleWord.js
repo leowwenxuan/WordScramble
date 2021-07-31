@@ -7,13 +7,10 @@ var words = ["python", "plate", "bowl", "fork", "spoon", "knife", "cupboard",
 function getrandomWords() {
         // chose a random word from the original array
         var randomWordsIndex = Math.floor(Math.random() * words.length);
-        // word.push(words[randomWordsIndex]);
         // store the word into a variable
         var chosenWord = words[randomWordsIndex];
         // remove the word from the original array to prevent repetition
         words.splice(randomWordsIndex, 1);
-        // console.log(word)
-        // console.log(chosenWord);
         return chosenWord;
 
 };
@@ -25,9 +22,6 @@ module.exports = class ScrambleGame {
         this.lives = 5;
     }
     shuffle() {
-        // store the word into a variable
-        // var chosenWord = words[this.rndWord];
-        // console.log(chosenWord);
         // split the chosen word into letters and store them in a variable
         const letters = this.rndWord.split("");
         // store the chosen words' length
@@ -48,17 +42,16 @@ module.exports = class ScrambleGame {
         return [this.score, this.lives, this.shuffle()];
     }
     guess(answer) {
+        // check if the user guess correct, if correct add +1 score
         if (answer == this.rndWord) {
             this.score += 1;
-            // console.log(getrandomWords())
-            // var newWord = getrandomWords();
             this.rndWord = getrandomWords();
-            // console.log(this.newWord);
             return this.rndWord;
-            // return getrandomWords();
         }
+        // if user anwer is incorrect, -1 lives
         else if (answer !== this.rndWord) {
             this.lives -= 1;
+            // if there's score -1 score
             if (this.score !== 0) {
                 this.score -= 1;
             }
