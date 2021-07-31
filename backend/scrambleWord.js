@@ -1,5 +1,8 @@
 var words = ["python", "plate", "bowl", "fork", "spoon", "knife", "cupboard",
-"mouse", "headphones", ""];
+"mouse", "headphones", "hike", "jabs", "junk", "jury","kept", "keys", "kilt",
+"kiss", "lads", "lamp", "lean", "less", "mark", "pride", "print", "purse", "quack",
+"queen", "quart", "query", "quiet", "rafts", "rated", "react","woefully", "xeroxing",
+"yardwork", "yearbook", "yummiest", "zizzling", "zoologic", "zucchini", "zoneless",]
 
 function getrandomWords() {
         // chose a random word from the original array
