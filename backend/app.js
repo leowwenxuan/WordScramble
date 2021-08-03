@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-var ScrambleGame = require("../backend/scrambleWord");
+var ScrambleGame = require("./scrambleWord");
 var app = express()
 app.use(cors())
 app.use(express.json())
