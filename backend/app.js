@@ -36,7 +36,8 @@ app.put("/", (req, res, next) => {
 });
 
 
-// listening to port 8000
-app.listen(8080, () => {
-    console.log("listening on Port 8080");
+// listening to port 8080
+const port = process.env.PORT
+app.listen(port, () => {
+    console.log("listening on Port " + port);
 });
