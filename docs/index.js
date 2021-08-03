@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         gameArea.classList.remove("hidden");
         header.classList.remove("hidden");
         startArea.remove();
-        fetch(`http://ades-ca3-wordscramble.herokuapp.com/`, {
+        fetch(`https://ades-ca3-wordscramble.herokuapp.com/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
     guessBtn.addEventListener('click', () => {
         const guess = guessInput.value;
-        fetch(`ades-ca3-wordscramble.herokuapp.com/?guess=${guess}`, { method: 'PUT' })
+        fetch(`https://ades-ca3-wordscramble.herokuapp.com/?guess=${guess}`, { method: 'PUT' })
             .then((response) => response.json())
             .then((json) => {
                 if (guess == "") {
@@ -59,7 +59,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             })
     })
     resetBtn.addEventListener('click', () => {
-        fetch(`ades-ca3-wordscramble.herokuapp.com/reset`, {
+        fetch(`https://ades-ca3-wordscramble.herokuapp.com/reset`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
